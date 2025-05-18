@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.jmu.system.mapper.SolutionMapper">
+    <select id="getProblemId" resultType="java.lang.Integer">
+        select pid from solutions where id=#{solutionId}
+    </select>
+    <select id="getSourceCode" resultType="java.lang.String">
+        select source_code from solutions where id=#{solutionId}
+    </select>
+
+    <select id="getProblemAnswer" resultType="java.lang.String">
+        select answer from problems where id=#{problemId}
+    </select>
+    <select id="getTrueResult" resultType="java.lang.String">
+        select true_result from problems where id=#{problemId}
+    </select>
+</mapper>
